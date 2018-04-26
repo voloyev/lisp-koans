@@ -83,13 +83,15 @@
   (setf a 100)
   (setf b 23)
   (setf c 456)
-  (let ((a __)
-        (b __)
-        (c __))
+  (let ((a 100)
+        (b 200)
+        (c "Jellyfish"))
     (assert-equal a 100)
     (assert-equal b 200)
     (assert-equal c "Jellyfish"))
-  (let* ((a __)
+  (let* ((a 121)
+         (b 200)
+         (c (+ a (/ b a)))
          ;; add more here
          )
     (assert-equal a 121)
@@ -106,13 +108,13 @@
                 (5 :five)
                 ;; t specifies default behavior
                 (t :unknown)))
-  (assert-equal ____ b)
+  (assert-equal :four b)
   "case can also check if a list of values contains
    the input"
   (setf c
         (case a (5 :five)
                 ((3 4) :three-or-four)))
-  (assert-equal ____ c))
+  (assert-equal ___ c))
 
 (defun cartoon-dads (input)
     "you should be able to complete this case statement"
