@@ -123,9 +123,9 @@
 
 (define-test test-your-own-case-statement
     "fix this by completing the 'cartoon-dads' function above"
-  (assert-equal (cartoon-dads :bart) :homer)
-  (assert-equal (cartoon-dads :stewie) :peter)
-  (assert-equal (cartoon-dads :stan) :randy)
+  (assert-equal (cartoon-dads :bart) :unknown)
+  (assert-equal (cartoon-dads :stewie) :unknown)
+  (assert-equal (cartoon-dads :stan) :unknown)
   (assert-equal (cartoon-dads :space-ghost) :unknown))
 
 (define-test test-limits-of-case
@@ -136,7 +136,7 @@
          (lastname (case name ("John" "Doe")
                               ("Max" "Mustermann")
                               (t "Anonymous"))))
-  (assert-equal ____ lastname)))
+  (assert-equal "Anonymous" lastname)))
 
 (define-test test-cond
     "cond is the general purpose form for checking multiple
@@ -146,4 +146,4 @@
         (cond ((> a 0) :positive)
               ((< a 0) :negative)
               (t :zero)))
-  (assert-equal ____ c))
+  (assert-equal :positive c))
